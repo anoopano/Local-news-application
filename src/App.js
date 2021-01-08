@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import WeatherInfo from './components/WeatherInfo';
+import NewsList from './components/NewsList';
+import { Container } from 'react-bootstrap';
+import { Languages } from './assets/constants';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const [selectedLanguage, setSelectedLanguage] = useState(Languages[0]);
+
+    const selectLanguage = (lang) => {
+        setSelectedLanguage(lang);
+    }
+
+    return (
+        <div className="App">
+            <Container>
+                <Header handleSelectLanguage={selectLanguage} />
+            </Container>
+        </div>
+    )
 }
 
 export default App;
+
+
+

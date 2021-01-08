@@ -1,0 +1,1 @@
+export const Languages = [ 'ml', 'en', 'ta', 'hi' ];
