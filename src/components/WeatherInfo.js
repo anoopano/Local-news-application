@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Spinner } from 'react-bootstrap';
+import { Spinner, Container, Form } from 'react-bootstrap';
 
 export class WeatherInfo extends Component {
 
@@ -23,7 +23,6 @@ export class WeatherInfo extends Component {
             const response = await axios.get(weatherApi);
             this.setState({ data: response.data, isFetching: false, isLoaded: true });
 
-            console.log(response.data)
         } catch (error) {
             console.log(error);
             this.setState({ isFetching: false })
@@ -60,24 +59,24 @@ export class WeatherInfo extends Component {
 
             return (
                 <div className="d-flex justify-content-md-center mt-3">
-                    <p className="ml-3">{data.name}</p>
-                    <p className="ml-3">{data.main.temp}&#8451;</p>
+                    <p className="ml-3">{data.name},</p>
+                    <p className="ml-3">{data.main.temp}&#8451;,</p>
                     <p className="ml-3">{data.weather[0].main}</p>
                 </div>
-
             )
         } else if (isFetching) {
 
             return (
-                <div className="d-flex justify-content-md-center mt-3 align-center">
+                <Container className="d-flex justify-content-md-center mt-3 align-center">
                     <Spinner animation="border" />
-                </div>
-
+                </Container>
             )
         } else {
 
             return (
-                <p>Unable to fetch weather information</p>
+                <Container>
+                    <p>Unable to fetch weather information</p>
+                </Container>
             )
         }
 
