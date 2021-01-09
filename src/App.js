@@ -10,6 +10,7 @@ const App = () => {
 
     const [selectedLanguage, setSelectedLanguage] = useState(Languages[0]);
 
+    //function to set language of our choice
     const selectLanguage = (lang) => {
         setSelectedLanguage(lang);
     }
@@ -18,6 +19,7 @@ const App = () => {
         <div className="App">
             <Container>
                 <Header handleSelectLanguage={selectLanguage} />
+                <WeatherInfo />
             </Container>
         </div>
     )
