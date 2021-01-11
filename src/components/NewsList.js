@@ -16,7 +16,7 @@ function NewsList({ news, newsFetchError, loadingNews }) {
             {news &&
                 news.articles.map(article => {
                     return (
-                        <NewsCard article={article} />
+                        <NewsCard key={article.publishedAt} article={article} />
                     )
                 })
             }
