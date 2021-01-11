@@ -1,7 +1,23 @@
 # Development
 
 * Clone the repo
-`dsfdv`
+
+`$ https://github.com/anoopano/Local-news-application.git`
+
+* Install dependencies
+
+`$ npm install`
+
+* Run scripts
+
+Action  | Usage
+---------|-------
+Start development mode |`npm start`
+Build for production| `npm run build`
+Run tests| `npm run test`
+Eject from create-react-app| `npm run eject`
+
+
 
 # Getting Started with Create React App
 
