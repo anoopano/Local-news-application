@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
-import WeatherInfo from './components/WeatherInfo';
 import { Languages } from './assets/constants';
 import useFetchNews from './components/FetchData/useFetchNews';
 import SearchNews from './components/SearchNews';
@@ -11,6 +10,7 @@ const App = () => {
 
     const [selectedLanguage, setSelectedLanguage] = useState(Languages[0]);
 
+    //getting data from useFetchNews hook
     const {
         news,
         loadingNews,
