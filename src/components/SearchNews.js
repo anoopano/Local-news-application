@@ -15,11 +15,11 @@ function SearchNews(selectedLanguage) {
         setSearchingNews(true);
 
         let cancel;
-        if (cancel != undefined) {
+        if (cancel !== undefined) {
             cancel.cancel();
         }
 
-        return axios({
+        axios({
             method: 'GET',
             url: `https://gnews.io/api/v4/search?token=${process.env.REACT_APP_NEWS_KEY}`,
             params: { q: searchQuery },
