@@ -1,3 +1,7 @@
+# Deployment
+
+[See the deployed application](url)
+
 # Development
 
 * Clone the repo
@@ -18,29 +22,6 @@ Run tests| `npm run test`
 Eject from create-react-app| `npm run eject`
 
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-
 # External Libraries used are
 
 ### `react-bootstrap`
@@ -54,3 +35,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `axios`
 
 [Axios](https://www.npmjs.com/package/axios) is a popular, promise-based HTTP client that sports an easy-to-use API and can be used in both the browser and Node. js. Making HTTP requests to fetch or save data is one of the most common tasks a client-side JavaScript application will need to do.
+
+
