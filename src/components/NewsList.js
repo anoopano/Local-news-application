@@ -1,8 +1,9 @@
 import React from 'react';
-import { Spinner, Card } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import './NewsList.css';
 import NewsCard from './NewsCard';
 
+//component for mapping news to newscard
 function NewsList({ news, newsFetchError, loadingNews }) {
 
     return (
