@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Spinner, Container, Form } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 
 export class WeatherInfo extends Component {
 
@@ -58,8 +58,8 @@ export class WeatherInfo extends Component {
         if (isLoaded) {
 
             return (
-                <div className="d-flex justify-content-md-center mt-3">
-                    <p className="ml-3">{data.name},</p>
+                <div className="d-flex mt-3" >
+                    <p>{data.name},</p>
                     <p className="ml-3">{data.main.temp}&#8451;,</p>
                     <p className="ml-3">{data.weather[0].main}</p>
                 </div>
@@ -67,20 +67,20 @@ export class WeatherInfo extends Component {
         } else if (isFetching) {
 
             return (
-                <Container className="d-flex justify-content-md-center mt-3 align-center">
+                <div className="mt-3">
                     <Spinner animation="border" />
-                </Container>
+                </div>
             )
         } else {
 
             return (
-                <Container>
+                <div className="mt-3">
                     <p>Unable to fetch weather information</p>
-                </Container>
+                </div>
             )
         }
 
     }
 }
 
-export default WeatherInfo
+export default WeatherInfo;
