@@ -8,15 +8,15 @@
 
 * Clone the repo
 
-`$ https://github.com/anoopano/Local-news-application.git`
+  `$ https://github.com/anoopano/Local-news-application.git`
 
 * Install dependencies
 
-`$ npm install`
+  `$ npm install`
 
 * Run scripts
 
-Action  | Usage
+  Action  | Usage
 ---------|-------
 Start development mode |`npm start`
 Build for production| `npm run build`
