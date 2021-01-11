@@ -4,7 +4,7 @@ import './NewsCard.css';
 
 function NewsCard({article}) {
     return (
-        <Card key={article.createdAt} style={{ width: '18rem' }} className="mx-3 newsCard">
+        <Card className="mx-3 newsCard">
             <a href={article.url} >
                 <Card.Img variant="top" src={article.image} />
                 <Card.Body>
