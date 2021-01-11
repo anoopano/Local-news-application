@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spinner, Card } from 'react-bootstrap';
-import './NewsList.css'
+import './NewsList.css';
+import NewsCard from './NewsCard';
 
 function NewsList({ news, newsFetchError, loadingNews }) {
 
@@ -14,18 +15,7 @@ function NewsList({ news, newsFetchError, loadingNews }) {
             {news &&
                 news.articles.map(article => {
                     return (
-                        <Card key={article.createdAt} style={{ width: '18rem' }} className="mx-3 newsList__card">
-                            <a href={article.url} >
-                                <Card.Img variant="top" src={article.image} />
-                                <Card.Body>
-                                    <Card.Title><b>{article.title}</b></Card.Title>
-                                    <Card.Text>
-                                        {article.description}
-                                    </Card.Text>
-                                </Card.Body>
-                            </a>
-                        </Card>
-
+                        <NewsCard article={article} />
                     )
                 })
             }
