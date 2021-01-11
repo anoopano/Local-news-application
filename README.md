@@ -16,8 +16,8 @@
 
 * Run scripts
 
-  Action  | Usage
----------|-------
+Action  | Usage
+--------|-------
 Start development mode |`npm start`
 Build for production| `npm run build`
 Run tests| `npm run test`
