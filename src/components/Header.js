@@ -1,30 +1,27 @@
 import React from 'react';
-import { Navbar, Form, FormControl, Button, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Navbar, Dropdown, DropdownButton } from 'react-bootstrap';
 import { Languages } from '../assets/constants';
+import { WeatherInfo } from './WeatherInfo';
+import './Header.css';
 
-function Header({ handleSelectLanguage }) {
+function Header({ handleSelectLanguage, language }) {
 
     return (
-        <>
-            <Navbar bg="light" variant="light" sticky="top" className="justify-content-between" >
+        <Navbar expand="lg" bg="light" fixed="top" sticky="top" className="justify-content-between header" >
 
-                <Navbar.Brand href="#home">Local news</Navbar.Brand>
+            <Navbar.Brand href="#home"><b>Local news</b></Navbar.Brand>
 
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                </Form>
+            <WeatherInfo />
 
-                <DropdownButton id="dropdown-basic-button" title="Select language">
-                    {
-                        Languages.map(lang => (
-                            <Dropdown.Item onSelect={() => handleSelectLanguage(lang)} href="#" key={lang}>{lang}</Dropdown.Item>
-                        ))
-                    }
-                </DropdownButton>
+            <DropdownButton id="dropdown-basic-button" title={`Language (${language})`}>
+                {
+                    Languages.map(lang => (
+                        <Dropdown.Item onSelect={() => handleSelectLanguage(lang)} href="#" key={lang}>{lang}</Dropdown.Item>
+                    ))
+                }
+            </DropdownButton>
 
-            </Navbar>
-        </>
+        </Navbar>
     )
 }
 
