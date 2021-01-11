@@ -32,7 +32,6 @@ function SearchNews(selectedLanguage) {
             })
     };
 
-    console.log(searchResult)
     const inputOnChange = (e) => {
         setSearchQuery(e.target.value)
         search(e.target.value);
