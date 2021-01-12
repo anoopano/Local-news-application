@@ -1,6 +1,6 @@
 # Deployment
 
-[See the deployed application](https://5ffd352b26f6437ffb17640c--givemelocalnews.netlify.app/) 
+[See the deployed application](https://givemelocalnews.netlify.app//) 
 
 
 
