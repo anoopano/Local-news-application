@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
 import { Languages } from './assets/constants';
-import useFetchNews from './components/FetchData/useFetchNews';
+import useFetchNews from './DataFetch/useFetchNews';
 import SearchNews from './components/SearchNews';
 
 const App = () => {
