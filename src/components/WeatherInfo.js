@@ -16,7 +16,7 @@ export class WeatherInfo extends Component {
 
     //function to fetch weather information
     async  getWeatherData(lat, lon) {
-        const weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
+        const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
 
         try {
             this.setState({ isFetching: true });
