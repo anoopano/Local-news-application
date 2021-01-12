@@ -28,7 +28,7 @@ const App = () => {
             <Header handleSelectLanguage={selectLanguage} language={selectedLanguage} />
 
             <div className="app__description">
-                <h2>Local News</h2>
+                <h2>Local news</h2>
                 <p>Local news is a place where you can <br />explore latest news on your local language</p>
             </div>
 
