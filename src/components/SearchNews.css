@@ -5,11 +5,6 @@
   margin-top: 20px;
 }
 
-.searchNews :hover {
-  transform: scale(1.01);
-  transition: 0.5s;
-}
-
 .form {
   margin-left: 7%;
   width: 40% !important;
