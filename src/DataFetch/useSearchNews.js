@@ -22,7 +22,6 @@ export default function useSearchNews(searchQuery, publishedAt) {
                     params: { q: searchQuery, sortby: publishedAt, },
     
                 }).then(res => {
-                    console.log(res.data);
                     setSearchResult(res.data);
                     setSearchingNews(false)
                 }).catch(e => {
@@ -30,7 +29,7 @@ export default function useSearchNews(searchQuery, publishedAt) {
                     setNewsSearchError(true)
                     console.log(e.message)
                 })
-            }, 3000)
+            }, 1000)
             return () => clearTimeout(delayDebounceFn)
         }
         
